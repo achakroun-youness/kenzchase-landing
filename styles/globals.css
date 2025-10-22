@@ -4,10 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Font configurations */
-  --font-primary: "Times New Roman", Times, serif;
-  --font-secondary: var(--font-geist-sans);
-
   /* Moroccan-themed color palette */
   --background: oklch(0.98 0.01 85);
   --foreground: oklch(0.25 0.02 280);
@@ -45,7 +41,6 @@
 }
 
 .dark {
-  /* Dark mode with Moroccan theme */
   --background: oklch(0.15 0.02 280);
   --foreground: oklch(0.98 0.01 85);
   --card: oklch(0.18 0.02 280);
@@ -81,7 +76,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-primary);
+  --font-brand: var(--font-times-new-roman);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -123,50 +119,26 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
     cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23E07A5F' opacity='0.5'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23E07A5F'/%3E%3C/svg%3E")
-        12 12,
-      auto;
+      12 12, auto;
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-primary);
-  }
-
-  /* Add Times New Roman specific font weights */
-  .font-bold {
-    font-weight: 700;
-    font-family: var(--font-primary);
-  }
-
-  .font-semibold {
-    font-weight: 600;
-    font-family: var(--font-primary);
-  }
-
-  .font-light {
-    font-weight: 300;
-    font-family: var(--font-primary);
-  }
-
-  /* Secondary font utility */
-  .font-secondary {
-    font-family: var(--font-secondary);
   }
 }
 
-a,
-button,
-[role="button"] {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%233D5A80' opacity='0.6'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%233D5A80'/%3E%3C/svg%3E")
+  a,
+  button,
+  [role="button"] {
+    cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%233D5A80' opacity='0.6'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%233D5A80'/%3E%3C/svg%3E")
       12 12,
     pointer;
 }
 
-/* Custom animations for 3D effects */
+/* Custom animations */
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {

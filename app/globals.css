@@ -38,12 +38,9 @@
   --sidebar-accent-foreground: oklch(0.25 0.02 280);
   --sidebar-border: oklch(0.9 0.02 85);
   --sidebar-ring: oklch(0.55 0.15 35);
-
-  --font-times-new-roman: "Times New Roman", Times, serif;
 }
 
 .dark {
-  /* Dark mode with Moroccan theme */
   --background: oklch(0.15 0.02 280);
   --foreground: oklch(0.98 0.01 85);
   --card: oklch(0.18 0.02 280);
@@ -122,28 +119,26 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
     cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23E07A5F' opacity='0.5'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23E07A5F'/%3E%3C/svg%3E")
-        12 12,
-      auto;
+      12 12, auto;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 
-a,
-button,
-[role="button"] {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%233D5A80' opacity='0.6'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%233D5A80'/%3E%3C/svg%3E")
+  a,
+  button,
+  [role="button"] {
+    cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%233D5A80' opacity='0.6'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%233D5A80'/%3E%3C/svg%3E")
       12 12,
     pointer;
 }
 
-/* Custom animations for 3D effects */
+/* Custom animations */
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
