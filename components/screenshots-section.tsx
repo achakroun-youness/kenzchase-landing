@@ -70,7 +70,7 @@ export function ScreenshotsSection() {
   };
 
   return (
-    <section className="py-24 px-4 overflow-hidden">
+    <section id="boussole" className="py-24 px-4 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,10 +80,10 @@ export function ScreenshotsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance font-brand">
-            See It In <span className="text-primary">Action</span>
+            Votre <span className="text-primary">Boussole d'Aventure</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Explore the app interface and discover all the features
+            Découvrez une interface conçue pour l'exploration, où chaque écran vous rapproche d'un nouveau secret.
           </p>
         </motion.div>
 

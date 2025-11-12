@@ -24,7 +24,7 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -33,7 +33,7 @@ export function HeroSection() {
               <span className="text-sm font-semibold text-primary">
                 🇲🇦 Discover Marrakech
               </span>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -41,18 +41,11 @@ export function HeroSection() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight font-brand"
             >
-              Explore Marrakech{" "}
-              <span className="text-primary">Like Never Before</span>
+              Le Maroc,{" "}
+              <span className="text-primary">Votre Nouveau Terrain de Jeu.</span>
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty font-brand"
-            >
-              Turn Every Monument Into An Adventure
-            </motion.p>
+           
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -60,8 +53,7 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-base md:text-lg text-muted-foreground mb-10 text-pretty max-w-xl mx-auto lg:mx-0"
             >
-              Experience AR-powered quests, unlock historic circuits, and level
-              up while exploring Morocco's cultural treasures.
+              Découvrez les trésors culturels du Maroc comme jamais auparavant. Avec Kenz Chase, suivez des circuits historiques, résolvez des énigmes en Réalité Augmentée et transformez votre visite en une quête épique.
             </motion.p>
 
             <motion.div
@@ -75,7 +67,7 @@ export function HeroSection() {
                 className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 <Apple className="mr-2 h-5 w-5" />
-                Download for iOS
+                Télécharger sur iOS
               </Button>
               <Button
                 size="lg"
@@ -83,7 +75,7 @@ export function HeroSection() {
                 className="text-lg px-8 py-6 border-2 bg-transparent"
               >
                 <Play className="mr-2 h-5 w-5" />
-                Download for Android
+                Télécharger sur Android
               </Button>
             </motion.div>
 
@@ -94,7 +86,7 @@ export function HeroSection() {
               className="mt-8"
             >
               <Button variant="link" className="text-primary">
-                Watch Demo Video →
+              Regardez la vidéo de présentation →
               </Button>
             </motion.div>
           </motion.div>

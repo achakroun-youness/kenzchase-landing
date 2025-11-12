@@ -6,27 +6,27 @@ import { Search, Navigation, Trophy } from "lucide-react"
 const steps = [
   {
     icon: Search,
-    title: "Discover",
-    description: "Browse nearby circuits on the interactive map with GPS markers",
+    title: "Choisissez",
+    description: "Parcourez nos destinations et sélectionnez le circuit narratif qui éveille votre curiosité.",
     step: "01",
   },
   {
     icon: Navigation,
-    title: "Explore",
-    description: "Walk to points of interest and complete engaging quests",
+    title: "Explorez",
+    description: "Rendez-vous sur place et laissez-vous guider par le conteur. Relevez les défis et voyez l'histoire revivre en AR.",
     step: "02",
   },
   {
     icon: Trophy,
-    title: "Level Up",
-    description: "Earn XP, collect rewards, and unlock achievements",
+    title: "Collectionnez",
+    description: "Terminez l'aventure pour gagner des artéfacts 3D uniques et des souvenirs pour votre collection personnelle.",
     step: "03",
   },
 ]
 
 export function HowItWorksSection() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+    <section id="how-it-works" className="py-24 px-4 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,10 +36,10 @@ export function HowItWorksSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-            How It <span className="text-primary">Works</span>
+            Votre Aventure en <span className="text-primary">3 Étapes</span> Simples
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Three simple steps to start your adventure in Marrakech
+            Lancez-vous dans une expérience inoubliable en quelques instants
           </p>
         </motion.div>
 

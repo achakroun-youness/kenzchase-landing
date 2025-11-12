@@ -7,29 +7,29 @@ import { Card } from "@/components/ui/card"
 const features = [
   {
     icon: Map,
-    title: "Interactive Circuits",
-    description: "Guided tours through historical sites with sequential points of interest",
+    title: "Circuits Narratifs",
+    description: "Suivez des parcours scénarisés à travers les légendes de chaque site historique",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: Gamepad2,
-    title: "Gamified Quests",
-    description: "QCM, Photo Challenges, AR Experiences, and Puzzles at each location",
+    title: "Défis Immersifs",
+    description: "Relevez des quiz culturels, des défis photo et des expériences en Réalité Augmentée à chaque étape.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
   },
   {
     icon: TrendingUp,
-    title: "Level & XP System",
-    description: "Progress from Explorer to Legend, unlock achievements and rewards",
+    title: "Progression & Succès",
+    description: "Gagnez de l'expérience (XP) à chaque découverte pour débloquer des titres et des succès exclusifs.",
     color: "text-accent",
     bgColor: "bg-accent/10",
   },
   {
     icon: Coins,
-    title: "Coin Economy",
-    description: "Earn and spend coins to unlock premium circuits and exclusive content",
+    title: "Trésors & Collections",
+    description: "Collectionnez des artéfacts 3D uniques et des souvenirs numériques pour compléter votre Codex d'explorateur.",
     color: "text-chart-4",
     bgColor: "bg-chart-4/10",
   },
@@ -37,7 +37,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="experiences" className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,10 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-            Everything You Need for an <span className="text-primary">Epic Adventure</span>
+            Une Aventure <span className="text-primary">Épique</span> à chaque Visite
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Transform your Marrakech visit into an unforgettable gaming experience
+            Transformez votre exploration en une expérience de jeu inoubliable
           </p>
         </motion.div>
 

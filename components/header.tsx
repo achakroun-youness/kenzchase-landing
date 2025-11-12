@@ -11,10 +11,10 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Circuits", href: "#circuits" },
-    { label: "About", href: "#about" },
+    { label: "Destinations", href: "/destinations" },
+    { label: "Expériences", href: "#experiences" },
+    { label: "Pour les Pros", href: "#pros" },
+    { label: "Créer une Aventure", href: "#creer" },
   ]
 
   return (
@@ -43,20 +43,31 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.href}
-                whileHover={{ scale: 1.05 }}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </motion.a>
+              item.href.startsWith('/') ? (
+                <Link key={index} href={item.href}>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                  >
+                    {item.label}
+                  </motion.div>
+                </Link>
+              ) : (
+                <motion.a
+                  key={index}
+                  href={item.href}
+                  whileHover={{ scale: 1.05 }}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </motion.a>
+              )
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90">Download App</Button>
+            <Button className="bg-primary hover:bg-primary/90">Télécharger l'App</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,16 +85,27 @@ export function Header() {
             className="md:hidden mt-4 pb-4 space-y-4"
           >
             {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="block text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={index}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={index}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
-            <Button className="w-full bg-primary hover:bg-primary/90">Download App</Button>
+            <Button className="w-full bg-primary hover:bg-primary/90">Télécharger l'App</Button>
           </motion.div>
         )}
       </nav>
